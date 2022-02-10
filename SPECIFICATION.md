@@ -30,9 +30,8 @@ Should be a non-random generated unique identifier
 The data this submission was created by the player.
 
 
-`player_id`: uint32
-A unique id that represents a player.
-For the time being this is unused
+`session_id`: uint32
+A unique id that represents a single play session
 
 
 `category`: string
@@ -72,4 +71,6 @@ The position of the player, a vector represented as a string
 
 ## Changelog
 
+2/10/2022 Changed player_id -> session_id
 2/9/2022 Created
+
