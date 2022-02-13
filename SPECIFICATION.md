@@ -70,11 +70,14 @@ The position of the player, a vector represented as a string
 The number of seconds in the game session when submitted
 
 
-
+`level_seed`: string
+Level generation seed for procedural levels
 
 
 
 ## Changelog
+
+2/13/2022 Added "level_seed"
 
 2/13/2022 Add "playtime" description & added to category tag
 
