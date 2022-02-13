@@ -38,10 +38,10 @@ A unique id that represents a single play session
 
 
 `category`: string
-One of "general", "bug", "performance", or ... //TODO: missing one option (check server)
+One of "general", "bug", "performance", or "gameplay"
 
 `mood`: uint8
-A measurement from 0-5 representing the players feelings about the thing they are submitting feedback for.
+A measurement from 1-4 representing the players feelings about the thing they are submitting feedback for.
 
 
 `build_id`: string
@@ -66,7 +66,8 @@ The name of the level the player is in
 `level_pos`: string "x, y, z"
 The position of the player, a vector represented as a string
 
-`playtime`: 
+`playtime`: integer
+The number of seconds in the game session when submitted
 
 
 
@@ -74,6 +75,8 @@ The position of the player, a vector represented as a string
 
 
 ## Changelog
+
+2/13/2022 Add "playtime" description & added to category tag
 
 2/13/2022 Specify timestamp format and timezone
 
