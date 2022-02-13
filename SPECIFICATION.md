@@ -16,12 +16,15 @@ Descriptions of fields in the present tense refer to the time when the submissio
 The first section (Fields) deals with generic data that applies less to any individual game. 
 The second section (State) is the data that is collect on the player.
 
+GUIDs are created (under the hood) using windows (CoCreateGuid)[https://docs.microsoft.com/en-us/windows/win32/api/combaseapi/nf-combaseapi-cocreateguid].
+MS claims that they will never be the same even on different systems.
+
 
 ## Fields
 
 
 
-`id`: uint32
+`id`: GUID
 The id of this submission.
 Should be a non-random generated unique identifier
 
@@ -30,7 +33,7 @@ Should be a non-random generated unique identifier
 The data this submission was created by the player.
 
 
-`session_id`: uint32
+`session_id`: GUID
 A unique id that represents a single play session
 
 
@@ -41,10 +44,11 @@ One of "general", "bug", "performance", or ... //TODO: missing one option (check
 A measurement from 0-5 representing the players feelings about the thing they are submitting feedback for.
 
 
-
 `build_id`: string
 The ID from unreal that identifies the build version that the player is playing
 
+`text`: string
+the text content of the submission
 
 `state`: object
 Select data about the current game and player state 
@@ -70,6 +74,8 @@ The position of the player, a vector represented as a string
 
 
 ## Changelog
+
+2/13/2022 Switch uint32 identifiers to GUIDs & add "text" field
 
 2/10/2022 Changed player_id -> session_id
 
