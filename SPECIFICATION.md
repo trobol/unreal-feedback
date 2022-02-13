@@ -30,7 +30,7 @@ Should be a non-random generated unique identifier
 
 
 `timestamp`: string
-The data this submission was created by the player.
+The data this submission was created by the player. UTC time, represented in Iso8601 format.
 
 
 `session_id`: GUID
@@ -74,6 +74,8 @@ The position of the player, a vector represented as a string
 
 
 ## Changelog
+
+2/13/2022 Specify timestamp format and timezone
 
 2/13/2022 Switch uint32 identifiers to GUIDs & add "text" field
 
