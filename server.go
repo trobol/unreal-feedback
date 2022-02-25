@@ -12,12 +12,15 @@ import (
 type FeedbackSubmission struct {
 	ID        string `json:"id"`
 	Timestamp string `json:"timestamp"`
-	PlayerID  string `json:"player_id"`
+	SessionID string `json:"session_id"`
 	Category  string `json:"category"`
 	Mood      uint8  `json:"mood"`
-	LevelName string `json:"level_name"`
 	BuildID   string `json:"build_id"`
 	Text      string `json:"text"`
+	Playtime  int    `json:"playtime"`
+	LevelName string `json:"level_name"`
+	LevelPos  string `json:"level_pos"`
+	LevelSeed string `json:"level_seed"`
 }
 
 func headers(w http.ResponseWriter, req *http.Request) {
@@ -113,7 +116,7 @@ func contains(s []string, str string) bool {
 	return false
 }
 
-func main() {
+func ServerMain() {
 
 	http.HandleFunc("/feedback", httpFeedback)
 
