@@ -93,12 +93,12 @@ func saveSubmission(submission FeedbackSubmission) error {
 			// TODO: a feedback with the same id or an existing feedback was sent again
 			//       check if the new and old feedbacks are the same
 			// for now just end
+			log.Println("duplicate id uploaded")
 			return nil
 		} else {
 			return err
 		}
 	}
-
 	defer f.Close()
 
 	encoder := json.NewEncoder(f)
