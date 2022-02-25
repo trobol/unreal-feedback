@@ -50,12 +50,8 @@ The ID from unreal that identifies the build version that the player is playing
 `text`: string
 the text content of the submission
 
-`state`: object
-Select data about the current game and player state 
-See below for the fields in this section
 
-
-## State
+## State 
 
 
 
@@ -76,6 +72,8 @@ Level generation seed for procedural levels
 
 
 ## Changelog
+
+2/25/2022 Removed "state" object and combined items with outer object
 
 2/13/2022 Added "level_seed"
 
