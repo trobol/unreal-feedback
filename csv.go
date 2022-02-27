@@ -34,6 +34,7 @@ func CsvMain() {
 		"level_pos",
 		"playtime",
 		"level_seed",
+		"text"
 	}
 
 	w.Write(header)
@@ -58,6 +59,7 @@ func CsvMain() {
 			sub.LevelPos,
 			strconv.Itoa(sub.Playtime),
 			sub.LevelSeed,
+			sub.Text
 		}
 		if err := w.Write(record); err != nil {
 			log.Fatalln("error writing record to csv:", err)
